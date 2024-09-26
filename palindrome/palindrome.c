@@ -51,6 +51,7 @@ char *palindrome(char const *str) {
   return answer;
 }
 
+// Helper function to free the memory allocated for the answer string
 void free_palindrome_result(char *result) {
   free(result); // Free the memory allocated for the answer string
 }

@@ -5,13 +5,13 @@
 void is_palindrome(char const *str) {
   char *result = palindrome(str);
   ASSERT_STREQ(result, "Yes");
-  free_palindrome_result(result);
+  free(result);
 }
 
 void not_palindrome(char const *str) {
   char *result = palindrome(str);
   ASSERT_STREQ(result, "No");
-  free_palindrome_result(result);
+  free(result);
 }
 
 TEST(Palindrome, HandlesEmptyString) {

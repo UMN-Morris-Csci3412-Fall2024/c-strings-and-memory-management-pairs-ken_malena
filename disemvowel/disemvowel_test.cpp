@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-
 #include "disemvowel.h"
 
 TEST(Disemvowel, HandleEmptyString) {
@@ -15,13 +14,11 @@ TEST(Disemvowel, HandleOnlyVowels) {
 }
 
 TEST(Disemvowel, HandleMorrisMinnesota) {
-  ASSERT_STREQ("Mrrs, Mnnst",
-		      disemvowel((char*) "Morris, Minnesota"));
+  ASSERT_STREQ("Mrrs, Mnnst", disemvowel((char*) "Morris, Minnesota"));
 }
 
 TEST(Disemvowel, HandlePunctuation) {
-  ASSERT_STREQ("n (nxplnd) lphnt!", 
-		      disemvowel((char*) "An (Unexplained) Elephant!"));
+  ASSERT_STREQ("n (nxplnd) lphnt!", disemvowel((char*) "An (Unexplained) Elephant!"));
 }
 
 TEST(Disemvowel, HandleLongString) {

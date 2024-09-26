@@ -20,8 +20,15 @@ int main(int argc, char *argv[]) {
     // Without it, nothing will ever be a palindrome, unless it happens
     // to somehow start with a '\n'.
     line[strcspn(line, "\n")] = '\0';
-    printf("Is the string <%s> a palindrome? %s\n", line, palindrome(line));
+    
+    // Store the result of the palindrome function
+    char *result = palindrome(line);
+    printf("Is the string <%s> a palindrome? %s\n", line, result);
+    
+    // Free the memory allocated for the answer string
+    free_palindrome_result(result);
   }
 
   free(line);
+  return 0;
 }

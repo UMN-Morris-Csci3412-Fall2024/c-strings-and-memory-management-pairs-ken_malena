@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     printf("Is the string <%s> a palindrome? %s\n", line, result);
     
     // Free the memory allocated for the answer string
-    free_palindrome_result(result);
+    free(result);
   }
 
   free(line);
